@@ -6,7 +6,7 @@ import {
 import { experiences, skills, educations } from "../constants";
 
 import "react-vertical-timeline-component/style.min.css";
-import CTA from "../components/CTA";
+import { CTA } from "../components";
 
 const About = () => {
   return (

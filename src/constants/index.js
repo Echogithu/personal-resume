@@ -1,4 +1,11 @@
-import { anwu, ruixin, guangong } from "../assets/images";
+import {
+  anwu,
+  ruixin,
+  guangong,
+  project1,
+  project2,
+  project3,
+} from "../assets/images";
 import {
   car,
   contact,
@@ -168,51 +175,28 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
-    theme: "btn-back-red",
-    name: "Amazon Price Tracker",
-    description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
-  },
-  {
-    iconUrl: threads,
-    theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
-    description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
-  },
-  {
-    iconUrl: car,
+    iconUrl: summiz,
     theme: "btn-back-blue",
-    name: "Car Finding App",
-    description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
-  },
-  {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
-    description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
-  },
-  {
-    iconUrl: estate,
-    theme: "btn-back-black",
-    name: "Real-Estate Application",
-    description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
+    name: "DICOM Viewer 医学影像阅片器",
+    description: `一个高效的在线 DICOM Viewer 医学影像阅片器，提供了快速流畅的医学影像阅读体验；支持多种
+      DICOM 图像模态，使医疗专业人员能够准确、快速地分析和诊断患者影像；通过灵活的挂片布局和多元化的医学
+      影像工具，提升了医学影像分析的准确性和效率。`,
+    link: project1,
   },
   {
     iconUrl: summiz,
-    theme: "btn-back-yellow",
-    name: "AI Summarizer Application",
-    description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-    link: "https://github.com/adrianhajdin/project_ai_summarizer",
+    theme: "btn-back-blue",
+    name: "睿心分数",
+    description: `该项目是一个建模软件的开发，主要应用于无创冠脉供血功能评估；通过医学图像的二维和三维可视化
+    处理，提供了中心线编辑、轮廓编辑和计算模型等功能，提高血管功能评估的准确率。`,
+    link: project2,
+  },
+  {
+    iconUrl: summiz,
+    theme: "btn-back-blue",
+    name: "3D 配置器",
+    description: `DIY 椅子,可自定义椅子材料、颜色等。`,
+    link: project3,
+    live: "https://echogithu.github.io/chair-configurator/",
   },
 ];
