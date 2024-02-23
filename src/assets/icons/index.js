@@ -4,10 +4,10 @@ import git from './git.svg'
 import github from './github.svg'
 import html from './html.svg'
 import javascript from './javascript.svg'
-import mongodb from './mongodb.svg'
-import motion from './motion.svg'
-import mui from './mui.svg'
-import nextjs from './nextjs.svg'
+import webpack from './webpack.svg'
+import vue from './vue.svg'
+import uniapp from './uniapp.svg'
+import antdesign from './antdesign.svg'
 import nodejs from './nodejs.svg'
 import react from './react.svg'
 import redux from './redux.svg'
@@ -34,10 +34,10 @@ export {
     github,
     html,
     javascript,
-    mongodb,
-    motion,
-    mui,
-    nextjs,
+    webpack,
+    vue,
+    uniapp,
+    antdesign,
     nodejs,
     react,
     redux,

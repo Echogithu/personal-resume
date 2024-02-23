@@ -1,15 +1,6 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
+import guangong from "./guangong.png";
+import anwu from "./anwu.png";
+import ruixin from "./ruixin.png";
+import logo from "./logo.svg";
 
-export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
-}
+export { guangong, anwu, ruixin, logo };

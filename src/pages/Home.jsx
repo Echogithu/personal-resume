@@ -1,10 +1,11 @@
 import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Loader  } from "@react-three/drei";
+import { Loader } from "@react-three/drei";
 import Island from "../models/Island.jsx";
 import Bird from "../models/Bird.jsx";
 import Plane from "../models/Plane.jsx";
 import Sky from "../models/Sky.jsx";
+import HomeInfo from "../components/HomeInfo.jsx";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -46,17 +47,16 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen relative">
-      {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        个人信息
-      </div> */}
+      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+        {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
-        {/* 加载异步资源时显示加载指示器或者备用内容，以提高用户体验 */}
-        <Suspense fallback={<Loader />}>
+        
           {/* 定向光 */}
           <directionalLight position={[1, 1, 1]} intensity={2} />
           {/* 环境光*/}
@@ -68,7 +68,7 @@ const Home = () => {
             intensity={1}
           />
           <Bird />
-          <Sky isRotating={isRotating}/>
+          <Sky isRotating={isRotating} />
           <Island
             position={islandPosition}
             scale={islandScale}
@@ -83,10 +83,13 @@ const Home = () => {
             rotation={[0, 20.1, 0]}
             scale={planeScale}
           />
-        </Suspense>
       </Canvas>
     </section>
   );
 };
 
 export default Home;
+
+
+// {/* 加载异步资源时显示加载指示器或者备用内容，以提高用户体验 */}
+// <Suspense fallback={<Loader />}>
