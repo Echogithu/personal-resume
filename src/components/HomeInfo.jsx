@@ -27,7 +27,7 @@ const HomeInfo = ({ currentStage }) => {
           <span>💌 13433680844@163.com</span>
         </p>
 
-        <Link to="/about" className="neo-brutalism-white neo-btn">
+        <Link to="/personal-resume/about" className="neo-brutalism-white neo-btn">
           了解更多
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
@@ -42,7 +42,7 @@ const HomeInfo = ({ currentStage }) => {
           如果好奇我的经历和项目 👀
         </p>
 
-        <Link to="/projects" className="neo-brutalism-white neo-btn">
+        <Link to="/personal-resume/projects" className="neo-brutalism-white neo-btn">
           了解更多
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
