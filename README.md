@@ -6,4 +6,4 @@
 https://echogithu.github.io/personal-resume/
 
 效果图：
-![](https://github.com/Echogithu/personal-resume/blob/main/public/demo.png?raw=true)
+![](https://github.com/Echogithu/personal-resume/blob/main/src/assets/demo.png?raw=true)
