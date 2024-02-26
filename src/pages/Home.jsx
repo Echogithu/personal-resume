@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Loader } from "@react-three/drei";
 import Island from "../models/Island.jsx";
@@ -6,10 +6,27 @@ import Bird from "../models/Bird.jsx";
 import Plane from "../models/Plane.jsx";
 import Sky from "../models/Sky.jsx";
 import HomeInfo from "../components/HomeInfo.jsx";
+import sakura from "../assets/sakura.mp3";
+import { soundoff, soundon } from "../assets/icons";
 
 const Home = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
+
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play();
+    }
+
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlayingMusic]);
 
   // 调整岛
   const adjustIslandForScreenSize = () => {
@@ -56,40 +73,43 @@ const Home = () => {
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
-        
-          {/* 定向光 */}
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          {/* 环境光*/}
-          <ambientLight intensity={0.5} />
-          {/* 半球光 */}
-          <hemisphereLight
-            skyColor="#b1e1ff"
-            groundColor="#000"
-            intensity={1}
-          />
-          <Bird />
-          <Sky isRotating={isRotating} />
-          <Island
-            position={islandPosition}
-            scale={islandScale}
-            rotation={islandRotation}
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
-            setCurrentStage={setCurrentStage}
-          />
-          <Plane
-            isRotating={isRotating}
-            position={planePosition}
-            rotation={[0, 20.1, 0]}
-            scale={planeScale}
-          />
+        {/* 定向光 */}
+        <directionalLight position={[1, 1, 1]} intensity={2} />
+        {/* 环境光*/}
+        <ambientLight intensity={0.5} />
+        {/* 半球光 */}
+        <hemisphereLight skyColor="#b1e1ff" groundColor="#000" intensity={1} />
+        <Bird />
+        <Sky isRotating={isRotating} />
+        <Island
+          position={islandPosition}
+          scale={islandScale}
+          rotation={islandRotation}
+          isRotating={isRotating}
+          setIsRotating={setIsRotating}
+          setCurrentStage={setCurrentStage}
+        />
+        <Plane
+          isRotating={isRotating}
+          position={planePosition}
+          rotation={[0, 20.1, 0]}
+          scale={planeScale}
+        />
       </Canvas>
+
+      <div className="absolute bottom-2 left-2">
+        <img
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt="jukebox"
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+          className="w-10 h-10 cursor-pointer object-contain"
+        />
+      </div>
     </section>
   );
 };
 
 export default Home;
-
 
 // {/* 加载异步资源时显示加载指示器或者备用内容，以提高用户体验 */}
 // <Suspense fallback={<Loader />}>
