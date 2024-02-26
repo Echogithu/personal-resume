@@ -57,10 +57,10 @@ const HomeInfo = ({ currentStage }) => {
           如果您需要招聘一名前端开发 👩🏻‍💻
         </p>
 
-        <Link to="/" className="neo-brutalism-white neo-btn">
+        <div className="neo-brutalism-white neo-btn">
           欢迎联系我
           {/*<img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />*/}
-        </Link>
+        </div>
       </div>
     );
   }
