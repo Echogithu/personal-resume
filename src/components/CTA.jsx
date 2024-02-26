@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CTA = () => {
   function downloadFile() {
-    fetch("/assets/resume.pdf", {
+    fetch("https://raw.githubusercontent.com/Echogithu/personal-resume/e661fdb40de6d3a87d4bf30c8c9dec849c09fd48/src/assets/resume.pdf", {
       responseType: "blob",
     })
       .then((response) => response.blob())

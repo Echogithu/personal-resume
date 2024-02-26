@@ -1,8 +1,9 @@
-# React + Vite
+# 个人简历在线版
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+技术栈： React + Vite + Three.js + [React Three Fiber](https://docs.pmnd.rs/)
 
-Currently, two official plugins are available:
+演示地址：
+https://echogithu.github.io/personal-resume/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+效果图：
+![](https://github.com/Echogithu/personal-resume/blob/main/public/demo.png?raw=true)
